@@ -1,0 +1,197 @@
+:root {
+    --couleurdark:#1e2227;
+    --couleurligne:#e37236;
+    --couleurtexte:#2c8cba;
+}
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--couleurdark);
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--couleurtexte);
+}
+
+/* :::::::::Page d'accueil::::::::: */
+
+main{
+    height: 80%;
+    background-color: var(--couleurdark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#titre{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 8%;
+    margin-top: 5%;
+    padding-right: 15px;
+    border-right:solid #e37236;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+h2{
+    font-size: calc(1rem + 1vw);
+    color: var(--couleurtexte);
+}
+
+#promo{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    color: white;
+    margin:1rem auto;
+}
+
+#gratuit{
+    position: absolute;
+    left: 40%;
+    top: 25px;
+    margin:1rem auto;
+    font-size: 0.8rem;
+    font-weight: 700;
+    animation: gratos 10s infinite ease-in-out;
+}
+
+h3{
+    font-size:0.9rem;
+    margin:0 auto;
+    font-weight: 700;
+}
+
+@keyframes gratos {
+    0%{font-size: 0.8rem;}
+    20%{font-size: 1rem;}
+    40%{font-size: 0.8rem;}
+    60%{font-size: 1rem;}
+    80%{font-size: 0.8rem;}
+    80%{transform: rotateY(0deg);}
+    90%{font-size: 1rem;}
+    90%{transform: rotateY(360deg);}
+    100%{transform: rotateY(-360deg);}
+    100%{font-size: 0.8rem;}
+}
+
+#menusection{
+    display: flex;
+    margin:80px auto 30px;
+    font-size: 1.25rem;
+    line-height: 2.75rem;
+    color: white;
+    padding:20px;
+    width: fit-content;
+    border:solid 3.5px;
+    border-color: #23272e;
+    box-shadow: 4px 4px 5px -2px rgba(255, 255, 255, 0.605);
+    /* animation: pushblock 10s ease-in-out forwards; */
+}
+
+#menusection a{
+    text-decoration: none;
+    color: white;
+}
+
+.blockanim{
+    animation: pushblock 3s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes pushblock {
+    0%{scale: 1;}
+    100%{scale:1.2;}
+}
+
+.handselect{
+    visibility:hidden;
+}
+
+#decosection{
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 auto; */
+    height: 200px;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+#decocontainer{
+    display: flex;
+    height: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#decocontainer img{
+    width: 100px;
+    float: left;
+    margin: 0 auto;
+    color: var(--couleurtexte);
+}
+
+#owlcontainer{
+    margin: 0 auto;
+    position: relative;
+}
+
+#boutonrouge{
+    position: absolute;
+    background-color: red;
+    z-index: 100;
+    pointer-events: all;
+    cursor:move;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    right: 21px;
+    top: 26px;
+    animation: termi 4s infinite;
+    box-shadow: 0 0 20px 0px rgba(255, 0, 0, 0.5);
+}
+
+@keyframes termi {
+    0%{box-shadow: 0 0 10px 20px rgba(255, 0, 0, 0.5);}
+    50%{box-shadow: 0 0 3px 3px rgba(255, 0, 0, 0.5);}
+    100%{box-shadow: 0 0 10px 20px rgba(255, 0, 0, 0.5);}
+}
+
+#slogan {
+    margin: 0 auto;
+    font-size: calc(1rem + 1vw);
+    font-weight: 700;
+}
+
+#slogan p{
+    margin: 3rem 0;
+    animation: focus 2s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes focus {
+    0%{margin: 3rem 0;}
+    100%{margin:0.75rem 0;}
+}
+
+/* :::::::::::Header & Footer:::::::::::: */
+
+header, footer{
+    background-color: var(--couleurtexte);
+    height: 10%;
+    width: 100vw;
+}
+
+
+/* ::::::::::: Partie desktop :::::::::::: */
